@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.persistence.*;
 
 /**
- * Created by MrViking on 16/10/2016.
+ * Created by MrViking on 02/11/2016.
  */
 @Entity
 public class Establishment {

@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
  * Created by MrViking on 02/11/2016.
  */
 @Repository
-public interface UserRepository extends JpaRepository<User, String>, JpaSpecificationExecutor<User> {
+public interface TransactionRepository extends JpaRepository<Transaction, Long>, JpaSpecificationExecutor<Transaction> {
 
 }

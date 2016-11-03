@@ -6,30 +6,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.persistence.*;
 
 /**
- * Created by MrViking on 16/10/2016.
+ * Created by MrViking on 02/11/2016.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
 public class User {
 
-    @JsonProperty("id")
-    private Long id;
     @JsonProperty("name")
     private String name;
     @JsonProperty("user_cpf")
     private String userCpf;
     @JsonProperty("balance")
     private double balance;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     @Basic
     @Column(name = "name", length = 50)
@@ -41,6 +29,7 @@ public class User {
         this.name = name;
     }
 
+    @Id
     @Basic
     @Column(name = "user_cpf", length = 15)
     public String getUserCpf() {
